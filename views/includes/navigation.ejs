@@ -1,0 +1,43 @@
+<nav class="navigation-container">
+    <ul class="navigation"> 
+        <li class="navigation__logo">
+        <a href="/" class="logo"></a>
+        </li>
+        <li class="navigation__item">
+            <a  class="navigation__link <%= path === '/' ? 'active' : '' %>" href="/">Shop</a>
+
+
+        </li>
+
+
+        <% if (!isAuthenticated) { %>
+            <li class="navigation__item">
+            <a  class="navigation__link <%= path === '/login' ? 'active' : '' %>"
+                 href="/login">Login</a>
+            </li>
+            <li class="navigation__item">
+                <a  class="navigation__link <%= path === '/signup' ? 'active' : '' %>"href="/signup">Signup</a>
+            </li>
+            <% } else { %>
+                <li class="navigation__item">
+                    <a  class="navigation__link <%= path === '/admin/add-product' ? 'active' : '' %>" href="/admin/add-product">Add product</a>
+                </li>
+                <li class="navigation__item">
+                    <a  class="navigation__link <%= path === '/admin/products' ? 'active' : '' %>"href="/admin/products"> Products</a>
+                </li>
+                <li class="navigation__item">
+                    <a  class="navigation__link <%= path === '/cart' ? 'active' : '' %>" href="/cart"> Cart</a>
+                </li>
+                <li class="navigation__item">
+                    <a  class="navigation__link <%= path === '/orders' ? 'active' : '' %>"href="/orders"> Orders</a>
+                </li>
+                <li class="navigation__btn">
+                   
+                    <form method="POST" action="/logout">
+                        <button class="btn " type="submit">logout</button>
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    </form>
+                </li>
+                <% } %>
+
+</nav>
