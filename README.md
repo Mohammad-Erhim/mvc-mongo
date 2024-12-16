@@ -1,10 +1,4 @@
 # mvc-mongo
-## Demo [https://mvc-mongo.herokuapp.com/](https://mvc-mongo.herokuapp.com/)
-(email:`test@gmail.com`,password:`111111`)
-
-https://user-images.githubusercontent.com/75538560/155998193-69e05b4c-7396-4414-a3ba-aba219090d32.mp4
-
-
 
 ## About
 mvc-mongo : it is an app built with Node js (shop app) .
